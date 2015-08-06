@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ICD10 NAV</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming -->
+	<link rel="stylesheet" href="css/themes/myTheme.css" />
+  	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+</head>
+<body>
+
+<div data-role="page" data-theme="d">
+
+  <div data-role="panel" id="myPanel"> 
+    <h2>Panel Header..</h2>
+    <p>Some text in the panel..</p>
+  </div> 
+
+<!-- navigation menu stuff -->
+  <div data-role="header" data-position="fixed">
+    <h1>ICD10 Navigator</h1>
+    <div data-role="navbar">
+    <ul>
+      <li><a href="#anylink">Home</a></li>
+      <li><a href="#anylink">P1</a></li>
+      <li><a href="#anylink">P2</a></li>
+      <li><a href="#anylink">P3</a></li>
+    </ul>
+  </div>
+  </div>
+<!-- end of the navigation menu stuff -->
+
+<!-- start of the main content stuff -->
+  <div data-role="main" class="ui-content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  	<a href="#myPanel" id="panel-link" class="ui-btn ui-btn-inline" style="display:none">Open Panel</a>
+  </div>
+
+  <div data-role="footer">
+    <h2>&copy; Rohane Hamilton 2015</h2>
+  </div>
+
+</div>
+
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script>
+$(function(){
+
+	$(document).on("swiperight",function(){
+	  $("a#panel-link").trigger("click");
+	});
+
+})
+</script>
+</body>
+</html>
